@@ -15,10 +15,8 @@ var server = http.createServer(function (req, res) {
   res.writeHead(200, { 'Content-Type': 'application/json' })
 
   if(pathname == '/api/parsetime') {
-    console.log(pathname)
     res.end(JSON.stringify(time))
   } else if (pathname == '/api/unixtime') {
-    console.log(pathname)
     res.end(JSON.stringify({'unixtime': date.getTime()}))
   }
 })
